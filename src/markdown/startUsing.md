@@ -3,7 +3,7 @@
 
 然后在你的代码中按需引入组件
 
-```import {Button, Tabs, Switch, Dialog} from "Dux-ui"```
+```import {Button, Tabs, Tab, Switch, Dialog} from "onejx-ui"```
 
 就可以使用我提供的组件了。
 
@@ -17,9 +17,9 @@ Vue 单文件组件
      </div>
    </template>
    <script>
-   import {Button, Tabs, Switch, Dialog} from "king-ui"
+   import {Button, Tabs, Tab, Switch, Dialog} from "onejx-ui"
    export default {
-     components: {Button}
+     components: { Button }
    }
    </script>
 ```

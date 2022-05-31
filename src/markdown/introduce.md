@@ -1,5 +1,5 @@
 # 介绍
-Dux Ui 是一款基于Vue3 和 TypeScript的UI组件库。
+onejx ui 是一款基于Vue3 和 TypeScript的UI组件库。
 
 这款组件库其实是为了总结自己学到的Vue技术而写的，全程亲手编写，尽量不采用第三方库
 

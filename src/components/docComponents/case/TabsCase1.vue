@@ -12,6 +12,7 @@
 
 <script lang="ts">
   import Tabs from "/src/lib/Tabs.vue";
+  //开发者需要从onejx-ui库中手动引入组件 import {xxx} from 'onejx-ui'
   import Tab from "/src/lib/Tab.vue";
   import {ref} from 'vue'
   export default {

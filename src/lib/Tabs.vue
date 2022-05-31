@@ -29,13 +29,12 @@
       const container = ref<HTMLDivElement>(null)
       onMounted(()=>{
         watchEffect(()=>{
-          console.log(selectedItem.value);
           const {width,left:resultLeft} = selectedItem.value.getBoundingClientRect()
           indicator.value.style.width = width + 'px'
           const {left:containerLeft} = container.value.getBoundingClientRect()
           const left = resultLeft - containerLeft
           indicator.value.style.left = left + 'px'
-        })
+        },{flush:'post'})
       })
       const defaults = context.slots.default()
       const titles = defaults.map(tag=>{

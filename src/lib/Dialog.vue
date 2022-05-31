@@ -5,7 +5,7 @@
       <header>
         <span>{{title}}</span>
         <p class="dux-dialog-icon" @click="close">
-          <img src="/src/assets/close.svg">
+          <span>X</span>
         </p>
       </header>
       <main>
@@ -45,7 +45,7 @@
         context.emit('update:visible',false)
       }
       const ok = ()=>{
-        if(props.ok?.()!== false){
+        if(props.ok && props.ok()!== false){
           close()
         }
       }

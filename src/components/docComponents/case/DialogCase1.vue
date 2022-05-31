@@ -8,6 +8,7 @@
 
 <script lang="ts">
   import Dialog from "/src/lib/Dialog.vue";
+  //开发者需要从onejx-ui库中手动引入组件 import {xxx} from 'onejx-ui'
   import Button from "/src/lib/Button.vue";
   import {ref} from 'vue'
   export default {
