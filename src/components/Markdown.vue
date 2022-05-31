@@ -14,7 +14,7 @@
       }
     },
     setup(props){
-		  const content = ref<string>('')
+		  const content = ref(null)
 		  import(props.filename).then((result)=>{
         content.value = result.default
       })
