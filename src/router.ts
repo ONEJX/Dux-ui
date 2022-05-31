@@ -6,20 +6,22 @@ import Switch from './components/docComponents/SwitchDemo.vue'
 import Button from './components/docComponents/ButtonDemo.vue'
 import Dialog from './components/docComponents/DialogDemo.vue'
 import Tabs from './components/docComponents/TabsDemo.vue'
-import DocIndex from './components/docComponents/DocIndex.vue'
+import install from './markdown/install.md'
+import introduce from './markdown/introduce.md'
+import startUsing from './markdown/startUsing.md'
 import Markdown from './components/Markdown.vue'
 const history = createWebHashHistory()
 
-// const markdown = filename =>{ h(Markdown,{filename:`../markdown/${filename}.md`})}
+const md = string => h(Markdown, { content: string, key: string })
 const router = createRouter({
   history,
   routes:[
     {path:'/',component:Home},
     {path:'/doc',component:Doc,children:[
         {path:'',redirect:'/doc/introduce'},
-        {path:'introduce',component:h(Markdown,{filename:`../markdown/introduce.md`,key:1})},
-        {path:'install',component:h(Markdown,{filename:`../markdown/install.md`,key:2})},
-        {path:'startUsing',component:h(Markdown,{filename:`../markdown/startUsing.md`,key:3})},
+        { path: "introduce", component: md(introduce) },
+        { path: "startUsing", component: md(startUsing) },
+        { path: "install", component: md(install) },
         {path:'switch',component:Switch},
         {path:'button',component:Button},
         {path:'dialog',component:Dialog},
